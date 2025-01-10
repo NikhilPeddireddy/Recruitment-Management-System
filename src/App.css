@@ -1,0 +1,46 @@
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 85%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #3e3e3e;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+
+
+.Toastify__toast--success {
+  background-color: #28a745;
+}
+
+.Toastify__toast--info {
+  background-color: #007bff;
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545;
+}
