@@ -25,3 +25,6 @@ The Recruitment Management System (RMS) is a web app built with React that helps
 - **Frontend:** React.js, React Toastify, Bootstrap
  - **State Management:** React useState
  - **Notifications:** React Toastify
+
+
+## Deployed Link:  https://recruitment-management-system-brown.vercel.app/
