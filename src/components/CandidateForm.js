@@ -34,7 +34,7 @@ const CandidateForm = ({ addCandidate }) => {
       id: Date.now(),
       resume: URL.createObjectURL(resume),
       stage: "Application Received",
-      evaluated: false,
+      evaluated: false, 
     };
 
     addCandidate(newCandidate); 
@@ -70,7 +70,7 @@ const CandidateForm = ({ addCandidate }) => {
             onChange={handleChange}
             className="form-control"
             required
-          />
+          /> 
         </div>
         <div className="col-md-3 w-75 p-3">
           <input

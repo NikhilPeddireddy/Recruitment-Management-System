@@ -35,14 +35,14 @@ const SearchAndFilter = ({ candidates, setFilteredCandidates }) => {
     <div className="mt-4 mb-4 d-flex flex-column flex-md-row justify-content-between">
       <input
         type="text"
-        className="form-control mb-2 mb-md-0 me-4"
+        className="form-control mb-2 md-0 me-4"
         placeholder="Search by name, email, or position"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button className="btn btn-primary ms-2 me-2" onClick={handleSearch}>Search</button>
       <select
-        className="form-select mb-2 mb-md-0"
+        className="form-select mb-2 md-0"
         value={filterStage}
         onChange={(e) => setFilterStage(e.target.value)}
       >

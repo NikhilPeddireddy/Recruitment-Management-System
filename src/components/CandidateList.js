@@ -1,12 +1,21 @@
 import React from "react";
+import SearchAndFilter from "./SearchAndFilter";
 
-const CandidateList = ({ candidates, deleteCandidate }) => {
+const CandidateList = ({ candidates, setFilteredCandidates, deleteCandidate }) => {
   return (
     <div className="mt-4">
       <h5 className="text-center mb-5">Candidate List</h5>
-     {candidates.length===0? 
-     <p className="text-center text-muted">No candidates to diaplay</p>:(
-          <table className="table table-striped">
+
+      <SearchAndFilter
+        candidates={candidates}
+        setFilteredCandidates={setFilteredCandidates}
+      />
+
+  
+      {candidates.length === 0 ? (
+        <p className="text-center text-muted">No candidates to display</p>
+      ) : (
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>Name</th>
@@ -40,10 +49,10 @@ const CandidateList = ({ candidates, deleteCandidate }) => {
                     <span className="text-warning">Not Evaluated</span>
                   )}
                 </td>
-               <td>
-               {candidate.resume ? (
+                <td>
+                  {candidate.resume ? (
                     <a
-                      href={candidate.resume} 
+                      href={candidate.resume}
                       download={`${candidate.name}_resume`}
                       className="btn btn-primary btn-sm"
                     >
@@ -52,7 +61,7 @@ const CandidateList = ({ candidates, deleteCandidate }) => {
                   ) : (
                     <span className="text-muted">No Resume</span>
                   )}
-               </td>
+                </td>
                 <td>
                   <button
                     className="btn btn-danger btn-sm"
@@ -65,7 +74,7 @@ const CandidateList = ({ candidates, deleteCandidate }) => {
             ))}
           </tbody>
         </table>
-     )}
+      )}
     </div>
   );
 };
