@@ -64,17 +64,17 @@ const App = () => {
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/candidates">
+                  <Link className="nav-link text-dark" to="/candidates">
                     Candidates
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/dashboard">
+                  <Link className="nav-link text-dark" to="/dashboard">
                     Dashboard
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/evaluate">
+                  <Link className="nav-link text-dark" to="/evaluate">
                     Evaluate Candidates
                   </Link>
                 </li>

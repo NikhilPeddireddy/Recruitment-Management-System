@@ -28,7 +28,7 @@ const SearchAndFilter = ({ candidates, setFilteredCandidates }) => {
   const handleReset = () => {
     setSearchTerm('');
     setFilterStage('');
-    setFilteredCandidates(candidates);
+    setFilteredCandidates([...candidates]);
   };
 
   return (

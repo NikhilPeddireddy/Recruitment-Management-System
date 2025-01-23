@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchAndFilter from "./SearchAndFilter";
 
-const CandidateList = ({ candidates, setFilteredCandidates, deleteCandidate }) => {
+const CandidateList = ({ candidates, deleteCandidate }) => {
+  const [filteredCandidates, setFilteredCandidates] = useState(candidates);
+
   return (
     <div className="mt-4">
       <h5 className="text-center mb-5">Candidate List</h5>
 
       <SearchAndFilter
         candidates={candidates}
-        setFilteredCandidates={setFilteredCandidates}
+        setFilteredCandidates={setFilteredCandidates} // Update the filtered list
       />
 
-  
-      {candidates.length === 0 ? (
+      {filteredCandidates.length === 0 ? (
         <p className="text-center text-muted">No candidates to display</p>
       ) : (
         <table className="table table-striped">
@@ -29,7 +30,7 @@ const CandidateList = ({ candidates, setFilteredCandidates, deleteCandidate }) =
             </tr>
           </thead>
           <tbody>
-            {candidates.map((candidate) => (
+            {filteredCandidates.map((candidate) => (
               <tr key={candidate.id}>
                 <td>{candidate.name}</td>
                 <td>{candidate.email}</td>
